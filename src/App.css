@@ -1,0 +1,37 @@
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body,
+html {
+	margin: 0;
+}
+
+img {
+	width: 300px;
+	height: 400px;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	gap: 3rem;
+	height: 100vh;
+	width: 100vw;
+}
+
+.buttons-container {
+	display: flex;
+	flex-direction: column;
+	margin: auto auto 0;
+	gap: 1.5rem;
+}
+
+.image-container {
+	margin: 0 auto auto;
+}
+
+.image-container img {
+	border: #1a1c1a solid 2px;
+}
