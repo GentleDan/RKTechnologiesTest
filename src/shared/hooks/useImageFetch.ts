@@ -8,8 +8,12 @@ export function useImageFetcher() {
 	const fetchImage = async () => {
 		try {
 			const res = await imageRequest();
-			if (res.success) setImageSource(res.source!);
-			else alert("Failed to fetch image");
+
+			if (res.success) {
+				setImageSource(res.source!);
+			} else {
+				alert("Failed to fetch image");
+			}
 		} catch (err) {
 			console.error("Unexpected error", err);
 		}
@@ -20,10 +24,12 @@ export function useImageFetcher() {
 	};
 
 	const disableAutoFetch = () => {
-		if (intervalRef.current !== null) {
-			clearInterval(intervalRef.current);
-			intervalRef.current = null;
+		if (intervalRef.current === null) {
+			return;
 		}
+
+		clearInterval(intervalRef.current);
+		intervalRef.current = null;
 	};
 
 	const resetImageSource = () => {
