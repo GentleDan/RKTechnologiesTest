@@ -1,5 +1,5 @@
 import { ChangeEvent, RefObject } from "react";
-import "./Checkbox.module.css";
+import styles from "./Checkbox.module.css";
 
 type CheckboxProps = {
 	label: string;
@@ -14,8 +14,8 @@ function Checkbox(props: CheckboxProps) {
 	};
 
 	return (
-		<label className="checkbox-container">
-			<input ref={props.ref} type={"checkbox"} onChange={handleChange} defaultChecked={props.defaultChecked} />
+		<label className={styles.checkboxContainer}>
+			<input ref={props.ref} type="checkbox" onChange={handleChange} defaultChecked={props.defaultChecked} />
 			{props.label}
 		</label>
 	);

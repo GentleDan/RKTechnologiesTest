@@ -1,0 +1,7 @@
+.imageContainer {
+	margin: 0 auto auto;
+}
+
+.imageContainer img {
+	border: #1a1c1a solid 2px;
+}

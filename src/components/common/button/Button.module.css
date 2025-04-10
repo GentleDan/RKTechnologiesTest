@@ -1,0 +1,38 @@
+button {
+	border-radius: 1px;
+	border: 1px solid #343434;
+	padding: 0.6em 1.2em;
+	background-color: #eaeaea;
+	cursor: pointer;
+	place-items: center;
+}
+
+button:hover:enabled {
+	background: #dfdfdf;
+}
+
+button:active:enabled {
+	background: #cfcfcf;
+}
+
+button:disabled {
+	cursor: not-allowed;
+}
+
+.loader {
+	border: 2px solid #afa8a8;
+	border-top: 2px solid #555a5c;
+	border-radius: 50%;
+	width: 1rem;
+	height: 1rem;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
